@@ -10,5 +10,5 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git && \
   apt-get clean && rm -rf /var/lib/apt/lists/*
 
 ADD rss-extender.nginx.conf /etc/nginx/conf.d/rss-extender.conf
-WORKDIR /var/www
 VOLUME /var/www/tmp
+WORKDIR /var/www/tmp
