@@ -1,6 +1,6 @@
 FROM tgbyte/nginx-php-fpm
 
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y git php7.0-dom && \
   git clone --depth 1 https://github.com/ginkel/rss-extender.git /var/www && \
   rm -rf /var/www/.git && \
   mkdir /var/www/tmp && \
